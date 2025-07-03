@@ -1,7 +1,7 @@
 import React from 'react';
 import "./SkillCardStyle.css";
 import { FaCss3, FaHtml5, FaJs, FaReact, FaJava, FaPython } from "react-icons/fa"; // Import FaJava and FaPython
-import { DiGit, DiCode } from "react-icons/di"; // Import DiCode for C
+import { DiGit} from "react-icons/di"; 
 import { SiVisualstudiocode, SiBootstrap, SiFigma, SiReactrouter } from "react-icons/si";
 import { FaCode } from 'react-icons/fa';
 import { IoLogoWindows, IoLogoNpm } from "react-icons/io";

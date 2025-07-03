@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import "./AboutMeStyle.css";
-import profile_black from "../images/profile_black.png";
-import profile from "../images/profile_image.png";
 
 export default function AboutMe({ id }) {
+  
   useEffect(() => {
-    
     const isInViewport = (element) => {
+      // view point is visible part of browser 
       const rect = element.getBoundingClientRect();
       return (
         rect.top >= 0 &&
@@ -16,29 +15,6 @@ export default function AboutMe({ id }) {
       );
     };
 
-
-    const handleNavClick = (event) => {
-      event.preventDefault();
-      const targetId = event.currentTarget.getAttribute("href").slice(1);
-      const targetElement = document.getElementById(targetId);
-      targetElement.classList.add("padded");
-
-      targetElement.scrollIntoView({
-        behavior: "smooth",
-      });
-
-      setTimeout(() => {
-        targetElement.classList.remove("padded");
-      }, 1000);
-    };
-
-   
-    const navLinks = document.querySelectorAll("nav a");
-    navLinks.forEach((link) => {
-      link.addEventListener("click", handleNavClick);
-    });
-
-    
     const handleScroll = () => {
       document.querySelectorAll("section").forEach((section) => {
         if (isInViewport(section)) {
@@ -52,9 +28,6 @@ export default function AboutMe({ id }) {
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      navLinks.forEach((link) => {
-        link.removeEventListener("click", handleNavClick);
-      });
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -63,34 +36,16 @@ export default function AboutMe({ id }) {
     <div className="about-container" id={id}>
       <div className="aboutMe-text">
         <h3>About Me</h3>
-        Hello, I'm <span>Rudrika Raghav</span>, currently pursuing my B.Tech in Computer Science at GLA University, Mathura. I am a dedicated and driven third-year student with a profound interest in technology and a relentless pursuit of excellence in the field. My journey in Computer Science has equipped me with a robust foundation in programming languages like C , Java , and Python . I thrive on challenges and have a proven track record of swiftly adapting to new technologies and methodologies, coupled with strong problem-solving skills. Beyond front-end development, I am actively exploring backend technologies  to broaden my skill set.
+        Hello, I’m Rudrika Raghav, a passionate B.Tech student in Computer Science at GLA University (2022-2026). With a love for technology and problem-solving, I’ve built a strong foundation in the MERN stack and languages like C, Python, and Java. Whether it’s developing dynamic e-commerce platforms or user-friendly job portals, I enjoy creating solutions that make a difference. When I'm not coding, I’m enhancing my skills on Leetcode and Hackerrank. Let’s connect and collaborate on exciting tech projects!
         <br />
         <br />
+        <span>Here’s a snapshot of my academic journey:</span>
         <div className="tab-contents">
           <ul>
+            <li>B.Tech in Computer Science – 8.70 CPI, GLA University, Mathura</li>
             <li>
-              <span>Bachelor of Technology in Computer Science</span> (2022-2026)
-              <br />
-              GLA University, Mathura - 8.70 CPI
-              <br />
-            </li>
-            
-            <li>
-              <span>Intermediate</span> (2021) 
-              <br />
-              Jaypee Vidya Mandir, Bulandshahr - 94.4%
-              <br />
-              
-            </li>
-          
-            <li>
-              <span>High School</span> (2019)
-              <br />
-              Seth Anandram Jaipuria School, Ghaziabad - 95%
-              <br />
-              <br />
-             
-            </li>
+            Intermediate (94.4%) – Jaypee Vidya Mandir, Bulandshahr</li>
+            <li>High School (95%) – Seth Anandram Jaipuria School, Ghaziabad</li>
           </ul>
         </div>
 
@@ -112,10 +67,8 @@ export default function AboutMe({ id }) {
       </div>
 
       <div className="profile-photo">
-        <img className="img" src={profile} alt="Profile"></img>
-
+        
       </div>
-      {/* <div className="name">Rudrika</div> */}
     </div>
   );
 }

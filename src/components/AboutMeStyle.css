@@ -41,12 +41,12 @@ section {
 }
 
 .padded {
-  padding-top: 60px; /* Adjust this value to the height of your navbar */
+  padding-top: 60px; 
 }
 
 .about-container {
   display: flex;
-  flex-wrap: wrap; /* Ensure content wraps on smaller screens */
+  flex-wrap: wrap; 
   margin: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -60,16 +60,16 @@ section {
 }
 
 .profile-photo {
-  flex: 1; /* Take up less space */
+  flex: 1; 
   margin-left: 3px;
-  margin-right: 140px; /* Adjust margin to reduce space */
+  margin-right: 140px; 
   padding: 0;
   margin-top: 100px;
 }
 
 .profile-photo .img {
-  height: auto; /* Ensure the image scales proportionally */
-  max-width: 100%; /* Adjust max-width to control image size */
+  height: auto; 
+  max-width: 100%; 
 }
 
 .aboutMe-text h3 {
@@ -108,13 +108,14 @@ section {
 span {
   background: linear-gradient(to right, #DF8908, #B415FF, #F94892);
   -webkit-background-clip: text;
+  font-size:x-large;
   -webkit-text-fill-color: transparent;
 }
 
 .profile-photo .heading {
   font-size: 22px;
   font-weight: 600;
-  margin-top: 20px; /* Adjust margin for heading */
+  margin-top: 20px; 
   color: #F94892;
 }
 
@@ -145,21 +146,21 @@ span {
   .about-container {
     flex-direction: column;
     align-items: center;
-    margin-left: 0; /* Reset margin for smaller screens */
-    margin-right: 0; /* Reset margin for smaller screens */
+    margin-left: 0; 
+    margin-right: 0; 
   }
 
   .aboutMe-text {
-    padding: 20px; /* Adjust padding for smaller screens */
+    padding: 20px; 
   }
 
   .profile-photo {
-    margin-top: 20px; /* Adjust margin-top for spacing */
-    max-width: 100%; /* Limit max-width for profile photo on smaller screens */
+    margin-top: 20px; 
+    max-width: 100%; 
   }
 
   .about-container .name {
-    display: none; /* Hide unnecessary elements on smaller screens */
+    display: none; 
   }
 }
 
@@ -174,14 +175,14 @@ span {
   }
 
   .aboutMe-text h3 {
-    font-size: 36px; /* Reduce font size for smaller screens */
+    font-size: 36px; 
   }
 
   .contact-window p {
-    font-size: 14px; /* Adjust font size for smaller screens */
+    font-size: 14px; 
   }
 
   .aboutMe-text .tab-contents ul li {
-    font-size: 16px; /* Adjust font size for smaller screens */
+    font-size: 16px; 
   }
 }

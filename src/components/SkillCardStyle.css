@@ -1,4 +1,4 @@
-/* Skill Container Styles */
+
 .skill-container {
     display: flex;
     flex-direction: column;
@@ -61,7 +61,7 @@
     padding: 30px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-    position: relative; /* Ensure that pseudo-elements are positioned relative to this */
+    position: relative; 
 }
 
 .skill-box .skillset abbr .techLogo:hover {
@@ -73,26 +73,26 @@
 /* Responsive Styles */
 @media screen and (max-width: 1040px), (max-height: 550px) {
     .skill-container {
-        margin: 50px 5vw 0; /* Adjusted margin for medium screens */
+        margin: 50px 5vw 0;
     }
 }
 
 @media screen and (max-width: 750px) {
     .skill-container {
         padding-top: 80px;
-        margin: 0 20px 0; /* Adjusted margin for small screens */
+        margin: 0 20px 0;
     }
 
     .skill-header {
-        font-size: 40px; /* Adjust font size for smaller screens */
+        font-size: 40px; 
     }
 
     .techLogo {
         height: 80px;
-        padding: 20px; /* Adjust padding for smaller screens */
+        padding: 20px; 
     }
 
     .skill-box h2 {
-        font-size: 30px; /* Adjust font size for smaller screens */
+        font-size: 30px; 
     }
 }

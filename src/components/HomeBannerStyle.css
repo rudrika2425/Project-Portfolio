@@ -1,4 +1,4 @@
-/* Base Styles */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,7 +10,7 @@ body {
     overflow: hidden;
     padding-bottom: 100px;
     
-    /* Adjust this value as needed */
+    
 }
 
 header {
@@ -50,7 +50,7 @@ section {
 }
 
 .padded {
-    padding-top: 60px; /* Adjust this value to the height of your navbar */
+    padding-top: 60px; 
 }
 
 .home {
@@ -58,14 +58,14 @@ section {
 }
 
 .home .content {
-    height: calc(100vh - 60px); /* Adjust for fixed header height */
+    height: calc(100vh - 60px); 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     padding-left: 22vw;
     margin-bottom: 50px;
-    margin-top: 60px; /* Adjust for fixed header */
+    margin-top: 60px; 
 }
 
 .home .content .wrapper {
@@ -154,7 +154,7 @@ section {
     margin-bottom: 150px;
 }
 
-/* Media Queries for Responsive Design */
+
 @media screen and (max-width: 1200px) {
     .home .content {
         padding-left: 18vw;
@@ -216,7 +216,7 @@ section {
     }
 }
 
-/* Social Links */
+
 .social-links {
     display: flex;
     gap: 20px;

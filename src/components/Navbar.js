@@ -1,49 +1,57 @@
-import React, { useState } from "react";
+import React from "react";
 import "./NavbarStyle.css";
 import { Link } from "react-scroll";
-import { FaBars, FaTimes } from "react-icons/fa";
-import resume from "../images/rudrika-raghav-drive-resume.pdf"; // Import the resume file
 
 export default function Navbar() {
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
 
+  //function for downloading file
   const downloadFile = () => {
-    const aTag = document.createElement('a');
-    aTag.href = resume; // Use the imported file URL
-    aTag.setAttribute('download', 'rudrika-raghav-drive-resume.pdf');
+    const resumePath = "/images/rudrika-raghav-drive-resume.pdf"; 
+    const aTag = document.createElement("a"); 
+    //anchor tag created dynamically
+    aTag.href = resumePath;
+    //set href attribute of anchor tag to path of resume
+    aTag.setAttribute("download", "rudrika-raghav-drive-resume.pdf");
+    //Sets the download attribute, which tells the browser to download the file rather than open it.
     document.body.appendChild(aTag);
+    //add tag to DOM
     aTag.click();
+    //simulate clik on that tag
     aTag.remove();
+    //remove anchor tag from DOM
   };
 
   return (
     <nav className="header">
       <div className="logo">
-      <Link 
-  activeClass="active"
-  to="home"
-  spy={true}
-  smooth={true}
-  duration={30}
->
-  <div className="logo-img">
-    
-    <span style={{ fontSize: '30px' }}>Rudrika :)</span>
-    
-  </div>
-</Link>
+        <Link
+          activeClass="active"
+          //This class will be added to the link when the section linked to is in view.
+          to="home"
+          // Specifies the target section to scroll to (with an ID of home).
+          spy={true}
+          smooth={true}
+          //Enables smooth scrolling effect.
+          duration={30}
+          //Sets the duration of the scroll animation (in milliseconds).
+        >
+          <div className="logo-img">
+            <span style={{ fontSize: "30px" }}>Rudrika :)</span>
+          </div>
+        </Link>
       </div>
-      <ul className={click ? "nav-menu active" : "nav-menu"} onClick={handleClick}>
+
+      <ul className="nav-menu">
         <li>
           <Link
             className="navLink"
             activeClass="active"
-            to="project"
+            to="projects"
             spy={true}
             smooth={true}
             duration={30}
             offset={-60}
+            //Adjusts the scroll position by 60px to prevent the content from being hidden behind the fixed navbar.
           >
             Projects
           </Link>
@@ -89,19 +97,10 @@ export default function Navbar() {
         </li>
       </ul>
       <div className="buttons-arrange">
-        <button
-          onClick={downloadFile} // Call the download function
-          className="btn"
-        >
+        <button onClick={downloadFile} className="btn">
+          {/* on click enable the function to be executed on clicking button */}
           Download Resume
         </button>
-      </div>
-      <div className="hamburger" onClick={handleClick}>
-        {click ? (
-          <FaTimes className="bars" size={25} />
-        ) : (
-          <FaBars className="bars" size={25} style={{ color: "#fff" }} />
-        )}
       </div>
     </nav>
   );
