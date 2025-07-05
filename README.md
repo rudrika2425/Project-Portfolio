@@ -10,7 +10,7 @@ Welcome to my personal developer portfolio! This project is a digital reflection
 
 I'm **Rudrika Raghav**, a dedicated and passionate Computer Science student with a deep interest in web development and creative problem-solving. This portfolio captures my learning, growth, and achievements in the tech space.
 
-- 🎓 3rd-year B.Tech CSE student  
+- 🎓 4th-year B.Tech CSE student  
 - 🧩 Focus: Frontend Development, UI/UX, and responsive design  
 - 🎯 Built with modern tooling (Vite, CSS), optimized for performance and aesthetics
 
