@@ -1,5 +1,5 @@
 import React from 'react';
-import "./HomeBannerStyle.css";
+import "../CSS/HomeBannerStyle.css";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function HomeBanner({ id }) {
