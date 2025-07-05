@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: black;
 }
 
 .project-wrapper {
@@ -19,10 +20,12 @@
 }
 
 .project-title {
-    margin-bottom: 15px;
-    font-size: 36px;
-    font-weight: 500;
-    color: #fff;
+  margin-bottom: 15px;
+  font-size: 36px;
+  font-weight: 500;
+  background: linear-gradient(to right, #DF8908, #B415FF, #F94892);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .about-project .desc {
@@ -42,6 +45,10 @@
 .odd .project-img {
     margin-right: 100px;
     margin-left: 0;
+}
+.collection{
+    display: flex;
+    gap: 20px;
 }
 
 @keyframes jump {

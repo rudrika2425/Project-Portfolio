@@ -1,104 +1,76 @@
-import React from "react";
+import React, { useState } from "react";
 import "../CSS/NavbarStyle.css";
 import { Link } from "react-scroll";
 
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  //function for downloading file
   const downloadFile = () => {
-    const resumePath = "/images/rudrika-raghav-drive-resume.pdf"; 
-    const aTag = document.createElement("a"); 
-    //anchor tag created dynamically
+    const resumePath = "/images/rudrika-raghav-drive-resume.pdf";
+    const aTag = document.createElement("a");
     aTag.href = resumePath;
-    //set href attribute of anchor tag to path of resume
     aTag.setAttribute("download", "rudrika-raghav-drive-resume.pdf");
-    //Sets the download attribute, which tells the browser to download the file rather than open it.
     document.body.appendChild(aTag);
-    //add tag to DOM
     aTag.click();
-    //simulate clik on that tag
     aTag.remove();
-    //remove anchor tag from DOM
   };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  const navItems = [
+    { name: "Projects", target: "projects" },
+    { name: "About", target: "about" },
+    { name: "Skills", target: "skills" },
+    { name: "Contact", target: "contact" }
+  ];
 
   return (
     <nav className="header">
       <div className="logo">
         <Link
-          activeClass="active"
-          //This class will be added to the link when the section linked to is in view.
           to="home"
-          // Specifies the target section to scroll to (with an ID of home).
           spy={true}
           smooth={true}
-          //Enables smooth scrolling effect.
           duration={30}
-          //Sets the duration of the scroll animation (in milliseconds).
+          onClick={closeMenu}
         >
           <div className="logo-img">
-            <span style={{ fontSize: "30px" }}>Rudrika :)</span>
+            <span>Rudrika</span>
+            <span className="blink">:)</span>
           </div>
         </Link>
       </div>
 
-      <ul className="nav-menu">
-        <li>
-          <Link
-            className="navLink"
-            activeClass="active"
-            to="projects"
-            spy={true}
-            smooth={true}
-            duration={30}
-            offset={-60}
-            //Adjusts the scroll position by 60px to prevent the content from being hidden behind the fixed navbar.
-          >
-            Projects
-          </Link>
-        </li>
-        <li>
-          <Link
-            className="navLink"
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            duration={30}
-            offset={-60}
-          >
-            About
-          </Link>
-        </li>
-        <li>
-          <Link
-            className="navLink"
-            activeClass="active"
-            to="skills"
-            spy={true}
-            smooth={true}
-            duration={30}
-            offset={-60}
-          >
-            Skills
-          </Link>
-        </li>
-        <li>
-          <Link
-            className="navLink"
-            activeClass="active"
-            to="contact"
-            spy={true}
-            smooth={true}
-            duration={30}
-            offset={-60}
-          >
-            Contact
-          </Link>
-        </li>
+      <div className="hamburger" onClick={toggleMenu}>
+        <div className={`bars ${isMenuOpen ? 'active' : ''}`}></div>
+      </div>
+
+      <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+        {navItems.map((item) => (
+          <li key={item.target}>
+            <Link
+              className="navLink"
+              to={item.target}
+              spy={true}
+              smooth={true}
+              duration={30}
+              offset={-60}
+              onClick={closeMenu}
+            >
+              {item.name}
+            </Link>
+          </li>
+        ))}
       </ul>
+
       <div className="buttons-arrange">
         <button onClick={downloadFile} className="btn">
-          {/* on click enable the function to be executed on clicking button */}
           Download Resume
         </button>
       </div>

@@ -1,4 +1,3 @@
-
 .skill-container {
     display: flex;
     flex-direction: column;
@@ -53,6 +52,13 @@
     gap: 10px 25px;
 }
 
+.skill-box .skillset abbr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+}
+
 .techLogo {
     border: 1px solid rgba(255, 255, 255, 0.8);
     border-radius: 15px;
@@ -61,13 +67,25 @@
     padding: 30px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-    position: relative; 
+    position: relative;
+    font-size: 60px;
+    color: #fff;
 }
 
 .skill-box .skillset abbr .techLogo:hover {
     border: 2px solid #fff;
     box-shadow: 0 5px 20px 0 #f94892;
     transform: scale(1.15);
+}
+
+.skill-name {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+    opacity: 0.9;
 }
 
 /* Responsive Styles */
@@ -82,17 +100,23 @@
         padding-top: 80px;
         margin: 0 20px 0;
     }
-
+    
     .skill-header {
-        font-size: 40px; 
+        font-size: 40px;
     }
-
+    
     .techLogo {
         height: 80px;
-        padding: 20px; 
+        padding: 20px;
+        font-size: 40px;
     }
-
+    
     .skill-box h2 {
-        font-size: 30px; 
+        font-size: 30px;
+    }
+    
+    .skill-name {
+        font-size: 12px;
+        margin-top: 8px;
     }
 }
