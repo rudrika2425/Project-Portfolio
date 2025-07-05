@@ -6,10 +6,10 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const downloadFile = () => {
-    const resumePath = "/images/rudrika-raghav-drive-resume.pdf";
+    const resumePath = "/images/Rudrika_Raghav_CSE_GLAU_Resume.pdf";
     const aTag = document.createElement("a");
     aTag.href = resumePath;
-    aTag.setAttribute("download", "rudrika-raghav-drive-resume.pdf");
+    aTag.setAttribute("download", "Rudrika_Raghav_CSE_GLAU_Resume.pdf");
     document.body.appendChild(aTag);
     aTag.click();
     aTag.remove();

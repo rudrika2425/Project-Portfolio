@@ -67,7 +67,7 @@ export default function AboutMe({ id }) {
               
               <li>
                  Reached to the Finale of Hackofiesta 6.0 conducted by IIIT Lucknow
-                <a href="https://drive.google.com/file/d/15n4IxvMghK0oBvHa6rAnuLmuBP_tM3e6/view?usp=sharing" className="certificate-link">View Certificate</a>
+                <a href="https://drive.google.com/file/d/1E4gfCxH_mhNa2KGg7ruQPmzAdoJpvAoh/view?usp=sharing" className="certificate-link">View Certificate</a>
               </li>
               
              
@@ -79,7 +79,7 @@ export default function AboutMe({ id }) {
           Curious to learn more about my journey? Feel free to{" "}
           <a
             className="resume"
-            href="https://drive.google.com/file/d/1dKwdA9ZFZEpZTpehbh98zK-f2MLIbCkF/view"
+            href="https://drive.google.com/file/d/1x-VGcDa1EC5dBrqfCxS9FZQ8fN_jSBZk/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
